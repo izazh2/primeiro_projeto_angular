@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CalculadoraComponent } from './calculadora/calculadora';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [CalculadoraComponent],
+  template: '<app-calculadora></app-calculadora>'
 })
-export class App {
-  protected readonly title = signal('calculadora');
-}
+export class AppComponent {}
